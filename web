@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Retro Garage — Hot Wheels & Mini GT</title>
+  <meta name="description" content="Retro Garage: tienda de Hot Wheels y Mini GT. Ediciones limitadas, coleccionables y personalizaciones." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#d62828;
+      --blue:#1e88e5;
+      --black:#0b0b0b;
+      --white:#f8f9fa;
+      --glass: rgba(255,255,255,0.06);
+      --card-shadow: 0 8px 24px rgba(11,11,11,0.25);
+      font-family: 'Inter', system-ui, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--black),#101010);color:var(--white);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--red),var(--blue));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .logo svg{filter:drop-shadow(0 2px 6px rgba(0,0,0,0.6))}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;font-size:12px;opacity:0.85}
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--red);color:var(--white);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:var(--card-shadow)}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:16px;box-shadow:var(--card-shadow)}
+    .kicker{color:var(--blue);font-weight:700;font-size:12px}
+    .eyebrow{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+    .headline{font-size:34px;margin:6px 0 12px}
+    .sub{opacity:0.85;line-height:1.5}
+    .cta-row{display:flex;gap:12px;margin-top:16px}
+
+    /* Rotating display */
+    .display{background:linear-gradient(180deg,#0f0f0f, #111111);border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+    .turntable{width:340px;height:220px;display:flex;align-items:center;justify-content:center;position:relative}
+    .plate{width:260px;height:110px;background:linear-gradient(180deg,#0b0b0b,#161616);border-radius:999px;box-shadow:inset 0 6px 18px rgba(255,255,255,0.02)}
+    .car{position:absolute;top:36px;left:50%;transform:translateX(-50%);width:220px;animation:tilt 6s linear infinite}
+    @keyframes tilt{0%{transform:translateX(-50%) rotate(-4deg)}50%{transform:translateX(-50%) rotate(4deg)}100%{transform:translateX(-50%) rotate(-4deg)} }
+
+    /* Products */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px}
+    .thumb{height:120px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--red));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700}
+    .meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+
+    /* Gallery */
+    .gallery{display:flex;gap:12px;margin-top:20px}
+    .gallery img{width:100%;height:130px;object-fit:cover;border-radius:8px}
+
+    /* Footer / contact */
+    footer{margin-top:36px;padding:18px;border-radius:12px;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.2));display:flex;justify-content:space-between;align-items:center}
+    .socials{display:flex;gap:12px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .logo{width:52px;height:52px}
+      .headline{font-size:26px}
+    }
+
+    /* little badge */
+    .badge{background:var(--white);color:var(--black);padding:6px 8px;border-radius:999px;font-weight:700;font-size:12px}
+
+    /* product hover */
+    .card:hover{transform:translateY(-6px);transition:all 220ms ease}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple car svg -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 11C3 9 5 6 7 6h10c2 0 4 3 4 5v2" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7.5" cy="16.5" r="1.5" fill="#fff"/>
+            <circle cx="16.5" cy="16.5" r="1.5" fill="#fff"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Retro Garage</h1>
+          <p class="lead">Hot Wheels • Mini GT • Ediciones Limitadas</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn secondary" href="#productos">Productos</a>
+        <a class="btn secondary" href="#galeria">Galería</a>
+        <a class="btn" href="#contacto">Contáctanos</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow"><span class="kicker">Nueva colección</span><span class="badge">Edición limitada</span></div>
+        <h2 class="headline">Coleccionables que cuentan historias</h2>
+        <p class="sub">Hot Wheels y Mini GT seleccionados cuidadosamente. Calidad, cajas impecables y envíos seguros. Para coleccionistas exigentes.</p>
+        <div class="cta-row">
+          <a class="btn" href="#productos">Ver destacados</a>
+          <a class="btn secondary" href="https://wa.me/502XXXXXXXX?text=Hola%20Retro%20Garage!%20Quiero%20info" target="_blank">WhatsApp</a>
+        </div>
+
+        <div class="grid" id="productos" style="margin-top:18px">
+          <article class="card">
+            <div class="thumb">HW: 1969 Camaro</div>
+            <div class="meta"><div>Hot Wheels</div><div><strong>Q120</strong></div></div>
+          </article>
+          <article class="card">
+            <div class="thumb">Mini GT: Skyline R34</div>
+            <div class="meta"><div>Mini GT</div><div><strong>Q380</strong></div></div>
+          </article>
+          <article class="card">
+            <div class="thumb">HW: Porsche 911</div>
+            <div class="meta"><div>Hot Wheels</div><div><strong>Q95</strong></div></div>
+          </article>
+        </div>
+
+      </div>
+
+      <aside class="display">
+        <div class="turntable" aria-hidden="true">
+          <div class="plate"></div>
+          <img class="car" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'><rect rx='20' width='600' height='300' fill='%230b0b0b'/><g transform='translate(40,40)'><path d='M20 120 L90 60 L360 60 L430 120 L470 120 L530 170 L530 200 L30 200 L30 170 Z' fill='%23d62828' stroke='%23000000'/><circle cx='120' cy='200' r='22' fill='%23000000'/><circle cx='420' cy='200' r='22' fill='%23000000'/></g></g></svg>" alt="auto giratorio"/>
+        </div>
+      </aside>
+    </section>
+
+    <section id="galeria" style="margin-top:22px">
+      <h3 style="margin:0 0 12px 0">Galería</h3>
+      <div class="gallery">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400'><rect width='800' height='400' rx='12' fill='%231e88e5'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='white' font-family='Inter'>Mini GT • Nissan Skyline</text></svg>" alt="mini gt"/>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400'><rect width='800' height='400' rx='12' fill='%23d62828'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='white' font-family='Inter'>Hot Wheels • Camaro 1969</text></svg>" alt="hot wheels"/>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400'><rect width='800' height='400' rx='12' fill='%23000000'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='white' font-family='Inter'>Ediciones Limitadas</text></svg>" alt="edicion limitada"/>
+      </div>
+    </section>
+
+    <section id="contacto" style="margin-top:22px">
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px">
+          <h4 style="margin:0 0 8px 0">¿Tienes preguntas?</h4>
+          <p style="margin:0 0 12px 0;opacity:0.9">Escríbenos por WhatsApp o usa el formulario y te contestamos dentro de 24 horas.</p>
+          <p style="margin:6px 0"><strong>WhatsApp:</strong> <a style="color:var(--blue);text-decoration:none" href="https://wa.me/502XXXXXXXX?text=Hola%20Retro%20Garage" target="_blank">Enviar mensaje</a></p>
+          <p style="margin:6px 0"><strong>Email:</strong> hola@retrogarage.example</p>
+          <p style="margin:6px 0"><strong>Ubicación:</strong> Guatemala (envíos nacionales)</p>
+        </div>
+
+        <form style="flex:1;min-width:260px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px" onsubmit="event.preventDefault();alert('Gracias! Nos pondremos en contacto.');">
+          <label style="display:block;margin-bottom:8px">Nombre</label>
+          <input required style="width:100%;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:var(--white);margin-bottom:10px" />
+          <label style="display:block;margin-bottom:8px">Mensaje</label>
+          <textarea required style="width:100%;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:var(--white);margin-bottom:10px"></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Retro Garage</strong>
+        <div style="opacity:0.8;font-size:13px">Hot Wheels • Mini GT • Coleccionables</div>
+      </div>
+      <div class="socials">
+        <a href="#" class="btn secondary">Instagram</a>
+        <a href="#" class="btn secondary">Facebook</a>
+        <a href="#" class="btn" style="background:var(--blue)">Tienda</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
